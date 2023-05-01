@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="136.0" layoutY="127.0" prefHeight="17.0" prefWidth="21.0" text="OK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="169.0" layoutY="127.0" prefHeight="17.0" prefWidth="110.0" text="Needs Attention" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Slider blockIncrement="0.01" layoutX="27.0" layoutY="72.0" majorTickUnit="0.1" max="1.0" minorTickCount="4" prefHeight="48.0" prefWidth="535.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="0.45" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="23.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Slider>
+      <VBox alignment="TOP_RIGHT" layoutX="28.0" layoutY="154.0" prefHeight="147.0" prefWidth="96.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" text="Tires">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="75.0" text="WheelsTrue">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" text="Spokes">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" text="Rear Hubs">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" text="Front Hubs">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="135.0" layoutY="154.0">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tires" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="wheeltrue" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="spokes" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="RHubs" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="FHubs" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="208.0" layoutY="154.0">
+         <children>
+            <RadioButton mnemonicParsing="false" toggleGroup="$tires">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" toggleGroup="$wheeltrue">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" toggleGroup="$spokes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" toggleGroup="$RHubs">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" toggleGroup="$FHubs">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Separator layoutX="38.0" layoutY="288.0" prefHeight="3.0" prefWidth="220.0" />
+      <VBox alignment="TOP_RIGHT" layoutX="13.0" layoutY="295.0" prefHeight="107.0" prefWidth="110.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="45.0" text="Brakes">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="Brake Pads">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="110.0" text="Rotor / Rim">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="110.0" text="Cables / Housing">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="207.0" layoutY="295.0">
+         <children>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="brakes" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="pads" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="rotorRim" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="BrakeCableHousing" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="135.0" layoutY="295.0">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$brakes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$pads">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$rotorRim">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$BrakeCableHousing">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutX="13.0" layoutY="418.0" prefHeight="147.0" prefWidth="110.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="63.0" text="Shifting">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="Shifter">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="82.0" text="Derailleurs">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="111.0" text="Cables / Housing">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="63.0" text="Cassette">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="Chainring">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="207.0" layoutY="415.0">
+         <children>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="shifting" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="shifter" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="derailleurs" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="shiftCableHosuing" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="cassette" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="chainring" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="135.0" layoutY="415.0" prefHeight="152.0" prefWidth="21.0">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$shifting">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$shifter">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$derailleurs">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$shiftCableHosuing">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$cassette">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$chainring">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutX="28.0" layoutY="580.0" prefHeight="52.0" prefWidth="96.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="Headset">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="110.0" text="Bottom Bracket">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="110.0" text="Pulleys">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="207.0" layoutY="580.0">
+         <children>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="headset" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="bottombracket" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="pulleys" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="135.0" layoutY="580.0">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$headset">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$bottombracket">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" selected="true" toggleGroup="$pulleys">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Separator layoutX="36.0" layoutY="569.0" prefHeight="3.0" prefWidth="220.0" />
+      <TextArea layoutX="279.0" layoutY="580.0" prefHeight="80.0" prefWidth="312.0" text="1&#10;2&#10;3" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="13.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextArea>
+      <Separator layoutX="46.0" layoutY="409.0" prefHeight="3.0" prefWidth="220.0" />
+      <TextArea layoutX="279.0" layoutY="415.0" prefHeight="152.0" prefWidth="312.0" text="1&#10;&#10;&#10;&#10;5&#10;6  this one the chain ring" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="13.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="279.0" layoutY="295.0" prefHeight="107.0" prefWidth="312.0" text="1&#10;&#10;3 this line would describe the condition of the rotor&#10;4" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="13.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="279.0" layoutY="153.0" prefHeight="127.0" prefWidth="312.0" text="1 this line describes the condition of the tire&#10;&#10;&#10;4&#10;5" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="13.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextArea>
+      <Label alignment="CENTER" layoutX="100.0" layoutY="48.0" prefHeight="30.0" prefWidth="546.0" text="Chain Wear @   0.45 %" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="96.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="27.0" layoutY="688.0" prefHeight="80.0" prefWidth="635.0" text="General description (if any)&#10;">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextArea>
+      <Label layoutX="23.0" layoutY="14.0" prefHeight="25.0" prefWidth="202.0" text="Norco Storm">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+.password, .username{
+    -fx-text-fill: white;
+    -fx-font-size: 12pt;
+}
+
+.personIcon, .lockIcon{
+    -fx-text-fill: white;
+}
+
+.accountCircle{
+    -fx-text-fill: white;
+    -fx-size: 45pt;
+}
+
+.loginBtn{
+    -fx-text-fill: black;
+    
+    -fx-text-align: center;
+}

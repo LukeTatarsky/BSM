@@ -1,0 +1,18 @@
+Duplicate entry 'Rocky mountain solo 5000-2' for key 'Name,Owner'
+	- need to ignore case when comparing names    'Rocky Mountain solo 5000-2'
+
+Add in a waiting check box for items in work orders.
+	- this way you can pull up a list of all the parts you need to get without having to check every work order.
+
+Add in additional bike info.  
+	- bike comment, shifters
+	- this could be an inspection form.
+	
+Issue when creating a new work order.
+	- when you go to edit customer info before saving and update customer info it clears all stuff in work order.
+	- does not happen when editing a work order. even if new items are added and not saved
+	
+	
+	Select statement: 
+SELECT * FROM AllWrkOrd_search WHERE orderId IN (SELECT orderId FROM AllWrkOrd_search_func WHERE orderId LIKE '%null%' OR FirstName LIKE '%null%' OR LastName LIKE '%null%' OR phone LIKE '%null%' OR email LIKE '%null%' OR BikeName LIKE '%null%' OR OrderStatus LIKE '%null%') ORDER BY orderId desc
+	

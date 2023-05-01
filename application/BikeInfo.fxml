@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="634.0" style="-fx-background-color: #101010; -fx-border-color: #ffcc9d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerBikeInfo">
+   <children>
+      <HBox layoutX="4.0" layoutY="14.0" prefHeight="74.0" prefWidth="589.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <VBox nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" text="Bike:" textFill="#fd9a3d">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" text="Serial:" textFill="#fd9a3d">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="txtBike" prefHeight="29.0" prefWidth="215.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtSerial" prefHeight="29.0" prefWidth="215.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" text="Owner:" textFill="#fd9a3d">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" text="Size:" textFill="#fd9a3d">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="txtOwner" editable="false" prefHeight="25.0" prefWidth="245.0" style="-fx-background-color: #CCCCCC;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtSize" prefHeight="29.0" prefWidth="245.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="48.0" layoutY="120.0" spacing="30.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+         <children>
+            <VBox prefHeight="365.0" prefWidth="237.0" spacing="3.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Cassette:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCassette" prefHeight="25.0" prefWidth="174.0" promptText="Cassette" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Rear Derailleur:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRDer" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Rear Tire:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRTire" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Rear Wheel:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRWheel" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Rear Brake:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRBrake" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Rear Pads:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRPads" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="276.0" prefWidth="237.0" spacing="3.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Chain:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtChain" prefHeight="25.0" prefWidth="174.0" promptText="Chain" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="123.0" text="Front Derailleur:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFDer" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Front Tire:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFTire" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Front Wheel:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFWheel" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Front Brake:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFBrake" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="115.0" text="Front Pads:" textFill="#fd9a3d" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFPads" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #EEEEEE;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="380.0" layoutY="517.0" spacing="30.0" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#saveInfo" prefHeight="25.0" prefWidth="81.0" text="Submit">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDiscard" mnemonicParsing="false" onAction="#cancel" text="Cancel">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
