@@ -1,3 +1,3 @@
 # BSM
-Bike Shop Manager
+Bike Shop Manager\n
 First JavaFX application. Work in Progress.
