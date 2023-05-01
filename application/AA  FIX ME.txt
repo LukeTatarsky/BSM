@@ -13,6 +13,7 @@ Issue when creating a new work order.
 	- does not happen when editing a work order. even if new items are added and not saved
 	
 	
+	fix this
 	Select statement: 
 SELECT * FROM AllWrkOrd_search WHERE orderId IN (SELECT orderId FROM AllWrkOrd_search_func WHERE orderId LIKE '%null%' OR FirstName LIKE '%null%' OR LastName LIKE '%null%' OR phone LIKE '%null%' OR email LIKE '%null%' OR BikeName LIKE '%null%' OR OrderStatus LIKE '%null%') ORDER BY orderId desc
 	
