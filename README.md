@@ -1,2 +1,2 @@
 # BSM
-Bike Shop Manager
+Bike Shop Manager - Work in progress
