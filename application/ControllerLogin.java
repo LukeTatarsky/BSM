@@ -132,7 +132,7 @@ public class ControllerLogin {
     private Boolean checkLogin() throws IOException, ClassNotFoundException, SQLException {
         
         
-        if(username.getText().toString().equals("admin") && password.getText().toString().equals("123")) {
+        if(username.getText().toString().equals("admin") && password.getText().toString().equals("321517")) {
         	
         	return true;
         	

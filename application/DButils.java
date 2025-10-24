@@ -22,9 +22,9 @@ public class DButils {
     private static Connection conn = null;
     
     //Connection String
-    private static final String address = "jdbc:mysql://192.168.0.1";  // router
-    private static final String uName = "null";
-    private static final String pass = "null";
+    private static final String address = "jdbc:mysql://192.168.1.212:3306/bsm";  // router
+    private static final String uName = "USER";
+    private static final String pass = "PASSWORD";
 	
 
 	public static void dbConnect() throws SQLException, ClassNotFoundException {

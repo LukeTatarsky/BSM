@@ -20,6 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -82,6 +83,14 @@ public class ControllerWorkOrder {
 	 @FXML
 	 private TextArea txtPrivNote;
 	 @FXML
+	 private Button btnAddItem;
+	 @FXML
+	 private Button btnRemoveItem;
+	 @FXML
+	 private Button btnNewItem;
+	 @FXML
+	 private VBox vBoxItemBtns;
+	 @FXML
 	 private TableView<Item> tblItems;
 	 @FXML
 	 private TableColumn<Item, String> colDesc;
@@ -91,6 +100,8 @@ public class ControllerWorkOrder {
 	 private TableColumn<Item, Number> colQty;
 	 @FXML
 	 private TableColumn<Item, Number> colTotal;
+	 @FXML
+	 private CheckBox receipt_mode;
 
 
 	private ObservableList<Item> allItems;
@@ -417,6 +428,7 @@ public class ControllerWorkOrder {
 			 if (b.getBikeId().compareTo(data.getBikeId()) == 0 ){
 				 currentBike = b;
 				 data.setSelectedBikeIndex(i);
+				 data.setOrderBike(b.getBikeName());
 				 break;
 			 }
 			 i++;
@@ -431,7 +443,10 @@ public class ControllerWorkOrder {
 		 		 
 		 // Comment
 		 txtComment.setText(orderInfo.get(8));
+		 data.setOrderNote(orderInfo.get(8));
+		 
 		 txtPrivNote.setText(orderInfo.get(11));
+		 data.setOrderPrivNote(orderInfo.get(11));
 		 
 		 // change the text colour of the checkbox is there is some private note
 		 if (txtPrivNote.getText() != null && txtPrivNote.getText().isEmpty() == false) {
@@ -852,6 +867,60 @@ public class ControllerWorkOrder {
 				 txtPrivNote.setVisible(false);
 				 txtPrivNote.setPrefWidth(1.0);
 				 txtComment.setPrefWidth(2000);
+			 } 
+		});
+		 
+		 // Hide all the buttons for receipt mode
+		 receipt_mode.selectedProperty().addListener((ov, oldValue, newValue) -> {
+			 if (newValue == true) {
+				 
+				// TODO change this to a regular button instead of checkbox. no use for this feature anymore.
+				 /*
+				 txtPrivNote.setVisible(false);
+				 txtPrivNote.setPrefWidth(1.0);
+				 txtComment.setPrefWidth(3000);
+				 
+				 chkPrivNote.setVisible(false);
+				 btnCustomerInfo.setVisible(false);
+				 btnBikeInfo.setVisible(false);
+				 btnAddItem.setVisible(false);
+				 btnRemoveItem.setVisible(false);
+				 btnNewItem.setVisible(false);
+				 vBoxItemBtns.setVisible(false);
+				 
+				 tblItems.resizeColumn(colQty, 50);
+				 tblItems.resizeColumn(colTotal, 50);
+				 tblItems.resizeColumn(colPrice, 50);
+				 tblItems.resizeColumn(colDesc, 200);
+				 */
+				 
+				 // create output file on desktop "order.csv"
+				 Receipt.print_order_to_file(data);
+				 
+				 
+				 // run this script to run macros from BSMRECEIPT.xlsm
+				 try {
+					Runtime.getRuntime().exec("wscript C:\\Users\\LT\\Desktop\\receipt.vbs");
+					receipt_mode.setSelected(false);
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				 
+			 }
+			 else {
+				 chkPrivNote.setSelected(false);
+				 chkPrivNote.setVisible(true);
+//				 txtPrivNote.setVisible(true);
+				 txtComment.setPrefWidth(3000);
+				 btnCustomerInfo.setVisible(true);
+				 btnBikeInfo.setVisible(true);
+				 btnAddItem.setVisible(true);
+				 btnRemoveItem.setVisible(true);
+				 btnNewItem.setVisible(true);
+				 vBoxItemBtns.setVisible(true);
+				 
 			 } 
 		});
 		

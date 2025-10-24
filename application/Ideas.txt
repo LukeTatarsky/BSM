@@ -1,0 +1,5 @@
+create a checkmark on items that need to ordered/purchased.
+
+create a priority queue. 
+first when someone needs their bike by a certain date.
+then some sort of FIFO/SJF combo.

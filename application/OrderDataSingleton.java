@@ -84,6 +84,7 @@ public class OrderDataSingleton {
 	private OrderDataSingleton() {
 		this.setSqlError(false);
 		this.setKeyword("");
+		this.setAddingItemFromItemsList(false);
 		
 	}
 	

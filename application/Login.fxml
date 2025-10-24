@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: blue;" styleClass="container" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerLogin">
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="900.0" style="-fx-background-color: blue;" styleClass="container" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerLogin">
    <left>
       <AnchorPane prefHeight="650.0" prefWidth="369.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
          <children>
@@ -20,7 +20,7 @@
                   <Image url="@newLogo.png" />
                </image>
             </ImageView>
-            <Text fx:id="title" layoutX="48.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIKE SHOP MANAGER">
+            <Text fx:id="title" layoutX="92.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LT BIKE REPAIR">
                <font>
                   <Font size="28.0" />
                </font>
@@ -34,7 +34,7 @@
                <font>
                   <Font size="13.0" />
                </font></TextField>
-            <PasswordField fx:id="password" layoutX="150.0" layoutY="328.0" onKeyPressed="#enterKey" onMouseClicked="#hideError" prefHeight="31.0" prefWidth="171.0" promptText="Password" style="-fx-border-color: orange; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" styleClass="password" stylesheets="@login.css" text="123" />
+            <PasswordField fx:id="password" layoutX="150.0" layoutY="328.0" onKeyPressed="#enterKey" onMouseClicked="#hideError" prefHeight="31.0" prefWidth="171.0" promptText="Password" style="-fx-border-color: orange; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" styleClass="password" stylesheets="@login.css" text="" />
             <Button fx:id="btnLogin" layoutX="198.0" layoutY="411.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: orange;" styleClass="loginBtn" stylesheets="@login.css" text="Login" textFill="#070707">
                <font>
                   <Font size="14.0" />

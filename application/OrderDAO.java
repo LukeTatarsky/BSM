@@ -172,7 +172,7 @@ public class OrderDAO {
     //*******************************
     public static ObservableList<Order> getOrdersForReport() throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
-        String selectStmt = "SELECT * FROM AllWorkOrders ORDER BY CreationDate desc";
+        String selectStmt = "SELECT * FROM AllWorkOrders WHERE CreationDate > '2023-01-01' ORDER BY CreationDate desc";
         //Execute SELECT statement
         try {
             //Get ResultSet from dbExecuteQuery method
@@ -591,7 +591,7 @@ public class OrderDAO {
     			+ "	S.quantity * S.soldPrice AS Subtotal,\r\n"
     			+ " S.cost, S.labour"
     			+ "	FROM ItemsSold S \r\n"
-    			+ "	WHERE S.orderId = '"+ orderId + "'  ORDER BY `Item Description`;";
+    			+ "	WHERE S.orderId = '"+ orderId + "'  ORDER BY `labour` desc, `Item Description`;";
         ObservableList<Item> items = FXCollections.observableArrayList();
         OrderDataSingleton data = OrderDataSingleton.getInstance();
         data.setOrderTotal((float) 0.0);

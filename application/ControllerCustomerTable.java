@@ -122,6 +122,19 @@ public class ControllerCustomerTable {
 		
 	}
 	
+	// return new list of customers using listener
+		public void findCustomerListen(String key ) throws Exception {		 
+			
+			if (txtKeyword.getText().isEmpty()) {
+				table.setItems(data.getAllCustomers());
+			}
+			else {
+				table.setItems(OrderDAO.findCustomer("'%" + txtKeyword.getText() + "%'"));
+			}
+			
+			
+		}
+	
 	
 	
 	public void editCustomerMouse(MouseEvent event ) throws Exception {		 
@@ -255,7 +268,25 @@ public class ControllerCustomerTable {
         colLastName.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
         colPhone.setCellValueFactory(cellData -> cellData.getValue().phoneProperty());
         colEmail.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
-
+        
+        
+        // Customer search listener 
+        txtKeyword.textProperty().addListener((ov, oldValue, newValue) -> {
+			try {
+				data.setKeyword(newValue);
+				findCustomerListen(data.getKeyword());
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+        
         showAllInit();
 	 }
 }
